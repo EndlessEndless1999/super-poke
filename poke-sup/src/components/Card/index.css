@@ -1,8 +1,14 @@
 .pokemon-card {
     outline: black 1px dotted;
-    padding: 5%;
+    padding: 4%;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    border-radius: 50px;
+    margin-bottom: 25px;
+}
+
+.pokemon-card:hover {
+    background-color: aqua;
 }
