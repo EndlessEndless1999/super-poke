@@ -5,6 +5,10 @@ const Card = (props) => {
     const [ pokemon, setPokemon ] = useState([]);
     const [ loading, setLoading ] = useState(false);
 
+    const handleClick = () => {
+
+    }
+
 
     useEffect(() => {
         async function data(){
@@ -20,8 +24,11 @@ const Card = (props) => {
   return (
     loading ? 
     <div className='pokemon-card'>
+        <div>{pokemon.id}:</div>
         <h1>{pokemon.name}</h1>
         <img src={pokemon.sprites.front_default}></img>
+        <div>Type: {pokemon.types[0].type.name}</div>
+        <button onClick={handleClick}>Add to Team!</button>
     </div> : <div>Loading</div>
   )
 }
