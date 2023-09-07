@@ -10,10 +10,10 @@ const Card = (props) => {
     const [ loading, setLoading ] = useState(false);
 
     const handleSubmit = (e) => {
-        e.preventDefault();
-        console.log(pokemon);
-        setTeam([...team, pokemon])
-        console.log(team);
+          e.preventDefault();
+          console.log(pokemon);
+          setTeam([...team, pokemon])
+          console.log(team);
     }
 
 

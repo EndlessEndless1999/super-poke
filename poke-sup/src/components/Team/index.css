@@ -1,10 +1,10 @@
 .team {
-    display: flex;
     outline: 1px black dotted;
     border-radius: 50px;
     justify-content: center;
     align-items: center;
 }
 
-.pokemon {
+button {
+    padding: 2%;
 }

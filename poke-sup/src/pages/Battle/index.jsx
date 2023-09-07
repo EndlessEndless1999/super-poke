@@ -1,9 +1,31 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import { BattleStart } from '../../components'
 
 const Battle = () => {
+
+  const [storage, setStorage] = useState()
+  const [loading, setLoading] = useState(false);
+
+  async function getTeam(){
+    const data = await localStorage.getItem('team');
+    const response = JSON.parse(data);
+    setLoading(true)
+    setStorage(response);
+  }
+
+  useEffect(() => {
+    getTeam()
+  },[])
+
+
   return (
-    <BattleStart />
+      <div>
+        {loading ? <div>
+          {storage.map((p, index) => {
+            return <img key={index} src={p.sprites.front_default}></img>
+          })}
+        </div> : <div>LOADING</div>}
+      </div>
   )
 }
 
