@@ -18,10 +18,11 @@ const Card = (props) => {
         data(1);
       },[])
   return (
+    loading ? 
     <div className='pokemon-card'>
         <h1>{pokemon.name}</h1>
-
-    </div>
+        <img src={pokemon.sprites.front_default}></img>
+    </div> : <div>Loading</div>
   )
 }
 
