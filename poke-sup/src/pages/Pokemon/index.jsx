@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react'
+import Card from '../../components/Card';
+import './index.css'
 
 const Pokemon = () => {
   const [ pokemon, setPokemon ] = useState([]);
@@ -17,9 +19,9 @@ const Pokemon = () => {
   },[])
 
   return (
-    loading ? <ul>{pokemon.map((p, index) => {
-      return <li key={index}>{p.name}</li>
-    })}</ul> : <div>Loading...</div>
+    loading ? <div className='pokemon-container'>{pokemon.map((p, index) => {
+      return <Card key={index} pokemon={p.url}>{p.name}</Card>
+    })}</div> : <div>Loading...</div>
   )
 }
 
