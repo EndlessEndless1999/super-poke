@@ -1,0 +1,2 @@
+- ADD useContext to track the team.
+- Create Database which allows users to save and load teams.
