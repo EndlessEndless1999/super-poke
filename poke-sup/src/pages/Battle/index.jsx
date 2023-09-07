@@ -20,7 +20,8 @@ const Battle = () => {
 
   return (
       <div>
-        {loading ? <div>
+        <h1>Team:</h1>
+        {loading ? <div className='team'>
           {storage.map((p, index) => {
             return <img key={index} src={p.sprites.front_default}></img>
           })}
