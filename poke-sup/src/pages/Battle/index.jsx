@@ -1,8 +1,9 @@
-// import React from 'react'
+import React from 'react'
+import { BattleStart } from '../../components'
 
 const Battle = () => {
   return (
-    <div>Battle</div>
+    <BattleStart />
   )
 }
 
