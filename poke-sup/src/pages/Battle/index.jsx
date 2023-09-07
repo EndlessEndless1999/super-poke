@@ -6,10 +6,10 @@ const Battle = () => {
   const [storage, setStorage] = useState()
   const [loading, setLoading] = useState(false);
 
-  async function getTeam(){
+  async function getTeam() {
     const data = await localStorage.getItem('team');
     const response = JSON.parse(data);
-    setLoading(true)
+    setLoading(true);
     setStorage(response);
   }
 
